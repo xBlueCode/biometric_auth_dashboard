@@ -1,0 +1,36 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Client App</title>
+</head>
+<body>
+
+<h2>Dashboard - Create new Client Application</h2>
+
+<form action="#" th:action="@{/dashboard/create}" th:method="post" th:object="${client}">
+    <table>
+        <tr>
+            <td><label> Client ID </label></td>
+            <td><input type="text" th:field="*{clientId}"></td>
+        </tr>
+        <tr>
+            <td><label> Client Secret </label></td>
+            <td><input type="text" th:field="*{clientSecret}"></td>
+        </tr>
+        <tr>
+            <td><label> Access Token Validity (Sec) </label> </td>
+            <td><input type="text" th:field="*{accessTokenValiditySeconds}"></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
